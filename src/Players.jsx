@@ -11,11 +11,11 @@ export default function Players() {
 
 
     return (
-        <div className="card">
-            <h4>Players: {players.length}</h4>
-            <ol>
+        <div className="card users-card">
+            <h3 className="users-title">Players: {players.length}</h3>
+            <ol className="users-list">
                 {
-                    players.map(player => <li>{player.name}</li>)
+                    players.map(player => <li key={player.id} className="user-item"><span className="user-name">{player.name}</span></li>)
                 }
             </ol>
         </div>

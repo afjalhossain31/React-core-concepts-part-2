@@ -182,3 +182,113 @@
     border-right-color: var(--border);
   }
 }
+
+.card {
+  width: min(760px, 92vw);
+  margin: 24px auto;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(100, 108, 255, 0.25);
+  background: linear-gradient(145deg, rgba(100, 108, 255, 0.08), rgba(83, 91, 242, 0.04));
+  box-shadow: 0 12px 30px rgba(23, 30, 75, 0.18);
+  text-align: center;
+}
+
+.users-card {
+  display: grid;
+  gap: 14px;
+}
+
+.users-title {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.users-empty {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.users-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.user-item {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.user-name {
+  font-weight: 700;
+}
+
+.user-email {
+  font-size: 0.9rem;
+  opacity: 0.88;
+}
+
+.friend {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.app-shell {
+  width: min(880px, 94vw);
+  margin: 0 auto;
+  padding: 28px 0 40px;
+  display: grid;
+  gap: 16px;
+}
+
+.app-title {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.app-subtitle {
+  margin: 0;
+  text-align: center;
+  opacity: 0.85;
+}
+
+.score-card {
+  display: grid;
+  gap: 10px;
+}
+
+.score-value {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.milestone {
+  margin: 0;
+  font-weight: 700;
+  color: #ffd166;
+}
+
+.actions-card {
+  display: grid;
+  gap: 14px;
+}
+
+.actions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.actions-grid.compact {
+  gap: 8px;
+}

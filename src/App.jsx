@@ -39,8 +39,10 @@ function App() {
   }
 
   return (
-    <>
-      <h3>Vite + React</h3>
+    <main className="app-shell">
+      <h1 className="app-title">React Core Concepts</h1>
+      <p className="app-subtitle">Practice events, state, and data rendering</p>
+
       <Players></Players>
       {/* <Suspense fallback={<h4>Posts are coming.......</h4>}>
         <Posts postsPromise={postsPromise}></Posts>
@@ -57,18 +59,19 @@ function App() {
       <Batsman></Batsman>
       <Counter></Counter>
 
-      {/* <button onclick="handleClick()">Click Me</button> */}
-      <button onClick={handleClick}>Click Me</button>
-      <button onClick={function handleClick2() {
-        alert('clicked 2')
-      }}>Click Me2</button>
-
-      <button onClick={handleClick3}>Click me 3</button>
-
-      <button onClick={() => alert('click 4')}>Click me 4</button>
-
-      <button onClick={() => handleAdd5(10)}>Click Add 5</button>
-    </>
+      <section className="card actions-card">
+        <h3 className="users-title">Action Buttons</h3>
+        <div className="actions-grid">
+          <button onClick={handleClick}>Click Me</button>
+          <button onClick={function handleClick2() {
+            alert('clicked 2')
+          }}>Click Me 2</button>
+          <button onClick={handleClick3}>Click Me 3</button>
+          <button onClick={() => alert('click 4')}>Click Me 4</button>
+          <button onClick={() => handleAdd5(10)}>Click Add 5</button>
+        </div>
+      </section>
+    </main>
   )
 }
 

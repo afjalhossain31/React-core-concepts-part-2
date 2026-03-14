@@ -3,29 +3,35 @@ import { useState } from "react"
 export default function Batsman() {
     const [runs, setRuns] = useState(0);
     const [sixes, setSixes] = useState(0);
+    const [fours, setFours] = useState(0);
+
     const handleSingle = () => {
-        const updatedRuns = runs + 1;
-        setRuns(updatedRuns);
+        setRuns(runs + 1);
+    }
+
+    const handleFour = () => {
+        setRuns(runs + 4);
+        setFours(fours + 1);
     }
 
     const handleSix = () => {
-        const updatedRuns = runs + 6;
-        const updatedSixes = sixes + 1;
-        setSixes(updatedSixes);
-        setRuns(updatedRuns);
+        setSixes(sixes + 1);
+        setRuns(runs + 6);
     }
 
     return (
-        <div>
-            <h3>Player: Bangla Batsman</h3>
-            <p><small>Six: {sixes}</small></p>
+        <div className="card score-card">
+            <h3 className="users-title">Player: Bangla Batsman</h3>
+            <p><small>Fours: {fours} | Sixes: {sixes}</small></p>
             {
-                runs > 50 && <p>You score: 50</p>
+                runs >= 50 && <p className="milestone">Half-century unlocked!</p>
             }
-            <h1>Score: {runs}</h1>
-            <button onClick={handleSingle}>singles</button>
-            <button>Four</button>
-            <button onClick={handleSix}>Six</button>
+            <h2 className="score-value">Score: {runs}</h2>
+            <div className="actions-grid compact">
+                <button onClick={handleSingle}>Single</button>
+                <button onClick={handleFour}>Four</button>
+                <button onClick={handleSix}>Six</button>
+            </div>
         </div>
     )
 }

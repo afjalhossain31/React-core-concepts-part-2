@@ -8,13 +8,12 @@ export default function Counter(){
         setCount(newCount);
     }
 
-    const counterStyle ={
-        border: '2px solid yellow'
-    }
     return(
-        <div style={counterStyle}>
-            <h3>Count: {count}</h3>
-            <button onClick={handleAdd}>Add</button>
+        <div className="card score-card">
+            <h3 className="users-title">Counter: {count}</h3>
+            <div className="actions-grid compact">
+                <button onClick={handleAdd}>Add +1</button>
+            </div>
         </div>
     )
 }
